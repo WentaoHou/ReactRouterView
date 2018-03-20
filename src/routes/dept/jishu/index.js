@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import RouterView from "@/components/RouterView";
+import RouterView from "react-router-view";
 
 class Jishu extends React.Component {
    render() {

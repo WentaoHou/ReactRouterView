@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {asyncComponent} from "@/common/asyncComponent";
 // 路由视图组件
-import RouterView from "@/components/RouterView";
+import RouterView from "react-router-view";
 
 const PageContent = asyncComponent(() => import ("@/components/PageContent/index"));
 const Container = asyncComponent(() => import ("@/layout/Container/index"))

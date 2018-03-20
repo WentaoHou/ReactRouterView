@@ -10,6 +10,7 @@ export default function () {
             {
                path: "/user",
                component: asyncComponent(() => import ("@/routes/user")),
+               redirect: "/user/a",
                childRoutes: [
                   {
                      path: "/user/a",
@@ -52,10 +53,34 @@ export default function () {
                      ]
                   }, {
                      path: "/dept/renshi",
-                     component: asyncComponent(() => import ("@/routes/dept/renshi"))
+                     component: asyncComponent(() => import ("@/routes/dept/renshi")),
+                     childRoutes: [
+                        {
+                           path: "/dept/renshi/renshi1",
+                           component: asyncComponent(() => import ("@/routes/dept/renshi/renshi1"))
+                        }, {
+                           path: "/dept/renshi/renshi2",
+                           component: asyncComponent(() => import ("@/routes/dept/renshi/renshi2"))
+                        }, {
+                           path: "/dept/renshi/renshi3",
+                           component: asyncComponent(() => import ("@/routes/dept/renshi/renshi3"))
+                        }
+                     ]
                   }, {
                      path: "/dept/shichang",
-                     component: asyncComponent(() => import ("@/routes/dept/shichang"))
+                     component: asyncComponent(() => import ("@/routes/dept/shichang")),
+                     childRoutes: [
+                        {
+                           path: "/dept/shichang/shichang1",
+                           component: asyncComponent(() => import ("@/routes/dept/shichang/shichang1"))
+                        }, {
+                           path: "/dept/shichang/shichang2",
+                           component: asyncComponent(() => import ("@/routes/dept/shichang/shichang2"))
+                        }, {
+                           path: "/dept/shichang/shichang3",
+                           component: asyncComponent(() => import ("@/routes/dept/shichang/shichang3"))
+                        }
+                     ]
                   }
                ]
             }, {

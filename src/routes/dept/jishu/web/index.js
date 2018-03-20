@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import Member from "./member.js";
-import RouterView from "@/components/RouterView";
+import RouterView from "react-router-view";
 
 
 function Web(props) {

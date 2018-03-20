@@ -1,8 +1,6 @@
 import React from "react";
-import {Switch, Route, Link} from "react-router-dom";
-import Renshi1 from "./renshi1";
-import Renshi2 from "./renshi2";
-import Renshi3 from "./renshi3";
+import {Link} from "react-router-dom";
+import RouterView from "react-router-view";
 
 class Renshi extends React.Component {
    render() {
@@ -19,11 +17,7 @@ class Renshi extends React.Component {
                   <Link to={`${this.props.match.url}/renshi3`}>人事3</Link>
                </li>
             </ul>
-            <Switch>
-               <Route path={`${this.props.match.url}/renshi1`} component={Renshi1}></Route>
-               <Route path={`${this.props.match.url}/renshi2`} component={Renshi2}></Route>
-               <Route path={`${this.props.match.url}/renshi3`} component={Renshi3}></Route>
-            </Switch>
+            <RouterView routes={this.props.childRoutes}></RouterView>
          </div>
       )
    }
